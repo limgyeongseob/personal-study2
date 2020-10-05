@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형레이아웃</title>
+  <style>
+    /* 화면크기가 960px 이상일 때 (pc화면) */
+    @media screen and (min-width:960px){
+      html{
+        background-color: aquamarine;
+        color: white;
+      }
+      #box1{
+        width: 200px;
+        height: 200px;
+        background-color: gray;
+      }
+      #box2{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+      }
+      #box3{
+        width: 200px;
+        height: 200px;
+        background-color: tomato;
+      }
+    }
+    /* 화면크기가 768px ~ 959px 일 때 (테블릿) */
+  @media screen and (min-width:768px) and (max-width:959px){
+    html{
+      background-color: powderblue;
+      color: pink;
+    }
+    #box1{
+        width: 200px;
+        height: 200px;
+        background-color: gray;
+      }
+      #box2{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+      }
+      #box3{
+        width: 200px;
+        height: 200px;
+        display: none;
+      }
+  }
+  /* 화면크기가 767px보다 작을 때 (모바일) */
+@media screen and (max-width:767px){
+  html{
+    background-color: black;
+    color: seashell;
+  }
+  #box1{
+        width: 200px;
+        height: 200px;
+        background-color: gray;
+      }
+      #box2{
+        width: 200px;
+        height: 200px;
+        display: none;
+      }
+      #box3{
+        width: 200px;
+        height: 200px;
+        display: none;
+      }
+}
+  </style>
+</head>
+<body>
+  <h1>반응형레이아웃</h1>
+  <p>lorem</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eius in laudantium consectetur ab libero dolorum unde tenetur minima id?</p>
+
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <div id="box3"></div>
+</body>
+</html>

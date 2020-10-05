@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>naver cover</title>
+  <style>
+     *{margin: 0 auto;}
+        /* PC탑 */
+        #top{
+            width: 100%;
+            height: 155px;
+            /* background-color: crimson; */
+        }
+        #top1171{
+            width: 1171px;
+            height: 155px;
+            /* background-color: cyan; */
+        }
+
+        /* 모바일탑 */
+        #mtop{
+            display: none;
+        }
+        #mtop536{
+            display: none;
+        }
+
+         /* PC미드 */
+         #mid{
+            width: 100%;
+            height: 536px;
+            /* background-color: darkslateblue; */
+        }
+        #mid1171{
+            width: 1171px;
+            height: 536px;
+            /* background-color: black; */
+        }
+        #mid791{
+            width: 791px;
+            height: 536px;
+            /* background-color: darkturquoise; */
+            float: left;
+        }
+
+        /* 모바일미드 */
+        #mmid{
+            display: none;
+        }
+        #mmid403{
+            display: none;
+
+        }
+
+        /* 사진설정 */
+        #bbb{
+            width: 100%;
+            height: 131px;
+            /* background-color: darkmagenta; */
+        }
+        #bbb2{
+            width: 1171px;
+            height: 131px;
+            /* background-color: darkseagreen; */
+        }
+        #bbb2 img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+        #box1{
+            width: 200px;
+            height: 131px;
+            /* background-color: red; */
+            float: left;
+        }
+        #box2{
+            width: 200px;
+            height: 131px;
+            /* background-color: black; */
+            float: left;
+            margin-left: 43px;
+        }
+        #box3{
+            width: 200px;
+            height: 131px;
+            /* background-color: powderblue; */
+            float: left;
+            margin-left: 43px;
+        }
+        #box4{
+            width: 200px;
+            height: 131px;
+            /* background-color: blue; */
+            float: left;
+            margin-left: 43px;
+        }
+        #box5{
+            width: 200px;
+            height: 131px;
+            /* background-color: green; */
+            float: right;
+        }
+        /* --------------------모바일 설정시작-------------------- */
+        @media screen and (max-width:760px){
+            #top{
+                display: none;
+            }
+            #top1171{
+                display: none;
+            }
+
+    
+            #mtop{
+                display: block;
+                width: 100%;
+                height: auto;
+                /* background-color: darkgoldenrod; */
+            }
+            #mtop536{
+                display: block;
+                width: 100%;
+                height: auto;
+                /* background-color: darkgreen; */
+            }
+            /* PC, 모바일 미드설정 */
+            #mid{
+            display: none;
+        }
+        #mid1171{
+            display: none;
+
+        }
+        #mid791{
+            display: none;
+
+        }
+
+        /* 모바일미드 */
+        #mmid{
+            display: block;
+            width: 100%;
+            height : auto;
+            /* background-color: dodgerblue; */
+         
+        }
+        #mmid403{
+            display: block;
+            width: 100%;
+            height: auto;
+            /* background-color: firebrick; */
+            
+        }
+    }
+  </style>
+</head>
+<body>
+  <!-- PC top -->
+  <div id="top">
+    <div id="top1171">
+      <img src="naver/naver-top.jpg" alt="탑">
+    </div>
+  </div>
+
+  <!-- mobile top -->
+  <div id="mtop">
+    <div id="mtop536">
+      <img src="naver/mnaver-top.jpg" alt="모바일탑">
+    </div>
+  </div>
+
+  <!-- PC mid -->
+  <div id="mid">
+    <div id="mid1171"> 
+      <img src="naver/naver-mid.jpg" alt="미드">
+    </div>
+  </div>
+
+  <!-- mobile mid -->
+  <div id="mmid">
+    <div id="mmid403"> 
+      <img src="naver/mnaver-mid.jpg" alt="모바일미드">
+    </div>
+  </div>
+
+ 
+</body>
+</html>
