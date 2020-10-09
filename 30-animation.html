@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      position: relative;
+      animation: ex1 1s linear 1s infinite normal;
+    }
+    @keyframes ex1{
+      0%  {background-color : black; top:0; left:0}
+      25% {background-color : gray; top:200px; left:200px}
+      50% {background-color :gainsboro; top:200px; left:0}
+      75% {background-color : darkblue; top:0; left:200px}
+      100%{background-color : black; top:0; left:0}
+    }
+        /* 
+        animation 옵션
+        animation:이름 재생시간 움직임형태 몇초후재상 반복횟수 진행방향
+
+        animation-name : 이름
+        animation-duration : 재생시간
+        animation-timming-function : 움직임형태
+        animation-delay : 몇초후재생
+        animation-iteration-count : 반복횟수 (infinite : 무한반복)
+        animation-direction : 진행방향
+        (alternate: A -> B  B -> A)
+        (nomal: 한방향으로 계속)
+         */
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

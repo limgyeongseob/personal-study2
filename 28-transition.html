@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition</title>
+  <style>
+    *{margin: 0 auto;}
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: palevioletred;
+      transition: 5s ease-in-out;
+    }
+    .box:hover{
+      width: 300px;
+      height: 300px;
+      transform: rotate(5000deg);
+    }
+        /* 
+        transform:rotate(120deg) => 120도 회전
+        transform:perspective(12px) => 변형
+        transform:scale(0.5) => 크기(1이 100% 0.5는 전반)
+         */
+
+
+        /* 
+        transition-property : transform => 트렌지션의 대상(width, height), all(전체)
+        transition-duration => 진행시간
+        transition-timming-function : ease-in => 진행속도차이
+        (ease:천천히-빠르게-천천히 순서)
+        (ease-in:시작이 느리게)
+        (ease-out:마지막에 느리게)
+        (ease-in-out:시작과 마지막이 느리게)
+        (linear:일정한 속도)
+        transition-delay => 지연시간
+         */
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
