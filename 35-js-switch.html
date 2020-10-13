@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>switch문</title>
+</head>
+<body>
+  <script>
+    var cha1;
+
+    cha1 = prompt("값", "1~5사이 숫자 입력");
+    cha1 = parseInt(cha1);
+
+    switch(cha1){
+      case 1:
+      document.write(cha1 + "관은 슈렉 상영중");
+      break;
+      case 2:
+      document.write(cha1 + "관은 스파이더맨 상영중");
+      break;
+      case 3:
+      document.write(cha1 + "관은 반도 상영중");
+      break;
+      case 4:
+      document.write(cha1 + "관은 다만악에서구하소서 상영중");
+      break;
+      case 5:
+      document.write(cha1 + "관은 어벤져스 상영중");
+      break;
+      default :
+      document.write("입력오류! 1~5 사이의 숫자 입력");
+    }
+  </script>
+</body>
+</html>

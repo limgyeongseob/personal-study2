@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if문</title>
+</head>
+<body>
+  <script>
+    var cha1;
+
+    cha1 = prompt("값", "점수입력");
+    cha1 = parseInt(cha1);
+
+    if(cha1 >= 90){
+      document.write("당신은" + cha1 + " 점으로 합격입니다.<br>");
+    }
+    else{
+      if(cha1 >= 80){
+        document.write("당신은" + cha1 + " 점으로 보류입니다.<br>");
+      }
+      else{
+        document.write("당신은" + cha1 + " 점으로 탈락입니다.<br>");
+      }
+    }
+  </script>
+</body>
+</html>

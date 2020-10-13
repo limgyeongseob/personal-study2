@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수2 - 사칙연산</title>
+</head>
+<body>
+  <script>
+    var cha1;
+    var cha2;
+    var sum, ca, gop, na;
+
+    cha1 = prompt("값을 입력하세요", "여기입력");
+    cha2 = prompt("값을 입력하세요", "여기입력");
+
+    //parseInt는 입력바든 값을 숫자형으로 변경
+    cha1 = parseInt(cha1);
+    cha2 = parseInt(cha2);
+
+    sum = cha1 + cha2;
+    ca = cha1 - cha2;
+    gop = cha1 * cha2;
+    na = cha1 / cha2;
+
+    document.write(cha1 + " + " + cha2 + " = " + sum + "입니다.<br>");
+    document.write(cha1 + " - " + cha2 + " = " + ca + "입니다.<br>");
+    document.write(cha1 + " X " + cha2 + " = " + gop + "입니다.<br>");
+    document.write(cha1 + " / " + cha2 + " = " + na + "입니다.<br>");
+  </script>
+</body>
+</html>
