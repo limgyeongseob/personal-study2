@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내장함수-confirm</title>
+</head>
+<body>
+  <script>
+    //confirm은 확인과 취소버튼이 나온다.
+    take = confirm("19세 이상은 확인, 미만은 취소를 누르시오.");
+
+    if(take === true){
+      document.write("당신은 19세 이상입니다");
+    }
+    else{
+      //location.href 이곳에 있는 페이지로 이동
+      location.href = "http://naver.com";
+    }
+  </script>
+</body>
+</html>
