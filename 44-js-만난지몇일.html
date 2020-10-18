@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da</title>
+</head>
+<body>
+    <script>
+        //1.오늘날짜
+        var to_day = new Date();
+
+        //2.처음만난 날
+        var inputYear;
+        var inputMonth;
+        var inputDay;
+
+        inputYear = prompt("연도 입력", "몇년도에 만났나요");
+        inputMonth = prompt("달 입력", "몇월에 만났나요");
+        inputDay = prompt("일 입력", "몇일에 만났나요");
+        inputYear = parseInt(inputYear);
+        inputMonth = parseInt(inputMonth);
+        inputDay = parseInt(inputDay);
+
+        //2-2. 입력받은날 계산
+        var meet_day = new Date(inputYear, inputMonth-1, inputDay, 0, 0, 0);
+
+        //3. 1970년 1월 1일부터 오늘까지 날짜를 초단위(1/1000)로 가져옴
+        var dateTime1 = to_day.getTime();
+
+        //4. 1970년 1월 1일부터 입력한 날짜까지의 시간
+        var dateTime2 = meet_day.getTime();
+
+        //5. 3번에서 4번을 빼기 (Mate.ceil -> 정수값만 표시)
+        var dateTimeLong = Math.ceil((dateTime1 - dateTime2) / 24 / 60 / 60 / 1000);
+        // 24 / 60 / 60 / 1000
+        // 하루/시간/분/밀리초
+
+        //6. 출력
+        document.write("처음만난 " + inputYear + "년 " + inputMonth + "월 " + inputDay + "일 이후 " + dateTimeLong + "일째 입니다.");
+    </script>
+</body>
+</html>

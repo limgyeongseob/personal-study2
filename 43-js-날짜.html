@@ -1,0 +1,40 @@
+!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜</title>
+</head>
+<body>
+    <script>
+        //컴퓨터에 있는 시간을 가져옴
+        var dateMET1 = new Date();
+        
+        var year = dateMET1.getFullYear();
+
+        //0이 1월 11이 12월
+        var month = dateMET1.getMonth()+1;
+        
+        var day = dateMET1.getDate();
+
+        var hour = dateMET1.getHours();
+
+        var minute = dateMET1.getMinutes();
+
+        var second = dateMET1.getSeconds();
+
+        document.write(dateMET1 + "<br>");
+
+        document.write("현재시간은 ");
+        document.write(year + "년 ");
+        document.write(month + "월 ");
+        document.write(day + "일 ");
+        document.write(hour + "시 ");
+        document.write(minute + "분 ");
+        document.write(second + "초");
+
+        //1초에 한번씩 새로고침한다
+        setTimeout("location.reload()", 1000);
+    </script>
+</body>
+</html>
