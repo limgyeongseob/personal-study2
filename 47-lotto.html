@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lotto</title>
+</head>
+<body>
+  <script>
+    var lotto = new Array(6); //배열 6개
+    var cnt = 0; //카운트 0~5
+    var mFlag = true; //중복확인
+
+    while(cnt < 6){  //6회 카운트
+      var number;
+      number = parseInt(Math.random() * 45) + 1;  //Math.random => 랜덤함수
+      //0~ 44 까지 총 45개의 공
+    
+      for(var i = 0; i < cnt; i++){
+        //랜덤 숫자 총 6개 가져올때까지 반복
+        if(lotto[i] == number){
+          mFlag = false;
+        }
+      }
+      if(mFlag == true){
+        lotto[cnt] = number;
+        cnt++;
+      }
+      mFlag = true;
+    }
+    document.write(
+      lotto[0] + " , " +
+      lotto[1] + " , " +
+      lotto[2] + " , " +
+      lotto[3] + " , " +
+      lotto[4] + " , " +
+      lotto[5]
+    );
+  </script>
+</body>
+</html>

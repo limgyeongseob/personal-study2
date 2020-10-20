@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+</head>
+<body>
+  <h1 id="id1">RED</h1>
+
+  <button type="button" onclick="btn01()">빨강색</button>
+  <button type="button" onclick="btn02()">검은색</button>
+
+  <script>
+    function btn01(){
+      document.getElementById("id1").style.color = "red";
+      document.getElementById("id1").style.fontSize = "80px";
+      document.getElementById("id1").style.backgroundColor = "black";
+    }
+    function btn02(){
+      document.getElementById("id1").style.color = "black";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <h1 id="demo">hello!!</h1>
+
+  <button type="button" onclick="btn01()">nice</button>
+  <button type="button" onclick="btn02()">come back</button>
+
+  <script>
+    function btn01(){
+      document.getElementById("demo").style.color = "red";
+      document.getElementById("demo").innerHTML = "nice";
+      //css에서는 글씨 자체는 못바꿔서 innerHTML을 사용하여 바꾼다
+    }
+    function btn02(){
+      document.getElementById("demo").style.color = "black";
+      document.getElementById("demo").innerHTML = "Hi!";
+    }
+  </script>
+</body>
+</html>
