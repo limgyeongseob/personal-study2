@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션모달박스</title>
+  <style>
+    .modal{
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      padding-top: 100px;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-content{
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid gray;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      /* 애니메이션 효과 */
+      animation-name: anitop;
+      animation-duration: 0.4s;
+    }
+    @keyframes anitop{
+      from{top:-300px; opacity:0;} /*opacity:0 -> 안보임*/
+      to{top: 0; opacity: 1;}  /*opacity:1 -> 보임*/
+    }
+    .close{
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bolder;
+    }
+    .close:hover{
+      color: blue;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .modal-header{
+      padding: 2px 16px;
+      background-color: powderblue;
+      color: white;
+    }
+    .modal-body{
+      padding: 2px 16px;
+    }
+    .modal-footer{
+      padding: 2px 16px;
+      background-color: powderblue;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>애니모달박스</h2>
+  <button id="myBtn">박스열기(open)</button>
+  <!-- 애니모달박스 시작 -->
+  <div id="myModal" class="modal">
+    <!-- 모달박스 컨텐츠 -->
+    <div class="modal-content"> 
+      <div class="modal-header">
+        <span class="close">&times;</span> <!--x 버튼-->
+        <h2>모달헤더</h2>
+      </div>
+      <div class="modal-body">
+        <p>여기는 본문</p>
+        <p>여기는 본문</p>
+        <p>여기는 본문</p>
+      </div>
+      <div class="modal-footer">
+        <h2>여기는 푸터</h2>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 모달박스 가지고오기
+    var modal = document.getElementById("myModal");
+    // 오픈버튼
+    var btn = document.getElementById("myBtn");
+    // 닫기버튼
+    var span = document.getElementsByClassName("close")[0];
+
+    // 오픈버튼을 누르면
+    btn.onclick = function(){
+      modal.style.display = "block";
+    }
+    // 닫기버튼을 누르면
+    span.onclick = function(){
+      modal.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
