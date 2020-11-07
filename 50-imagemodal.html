@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지모달박스</title>
+    <style>
+        #myImg{
+            border-radius: 5px;  /*이미지 끝이 곡선으로 됨*/
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #myImg:hover{
+            opacity: 0.7; /*마우스 올리면 살짝 흐려지는 효과*/
+        }
+        /* 이미지 모달박스 설정 */
+        .modal{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            padding-top: 100px;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        /*x버튼*/
+        .close{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover{
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* 사진이 나오는 위치 */
+        .modal-content{
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        /* 사진아래 텍스트 */
+        #caption{
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /*애니메이션 추가*/
+        .modal-content, #caption{
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        @keyframes zoom{
+            from{transform: scale(0);}
+            to{transform: scale(1);}
+        }
+
+    </style>
+</head>
+<body>
+    <h2>이미지 모달박스</h2>
+
+    <img id="myImg" src="cat.jpg" alt="고양이" width="300px" height="200px">
+
+    <!-- 이미지 모달박스 시작 -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <!-- 사진이 추가될 위치 -->
+        <img class="modal-content" id="img01">
+        <!-- 사진아래 텍스트 -->
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        //모달박스
+        var modal = document.getElementById("myModal");
+        //버튼역할의 작은사진
+        var img = document.getElementById("myImg");
+        //큰사진
+        var madalImg = document.getElementById("img01");
+        //사진아래 텍스트
+        var captionText = document.getElementById("caption");
+
+        //작은 사진을 클릭하면
+        img.onclick =function(){
+            modal.style.display ="block";
+            madalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        //x버튼을 클릭하면
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function(){
+            modal.style.display ="none";
+        }
+    </script>
+</body>
+</html>
