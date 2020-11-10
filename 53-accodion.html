@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>열림박스(accodion)</title>
+  <style>
+    button.accodion{
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+    button.accodion.active,
+    button.accodion:hover{
+      background-color: #ddd;
+    }
+    /* 가상클래스 +표기, -표시 */
+    button.accodion:after{
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-right: 5px;
+    }
+    button.accodion.active:after{
+      content: '\2212'
+    }
+
+    div.panel{
+      padding: 0;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2 ease;
+    }
+  </style>
+</head>
+<body>
+  <h2>열림박스 예제(Accodion)</h2>
+
+  <button class="accodion">버튼 1</button>
+
+  <div class="panel">
+    <p>여기는 본문 입니다</p>
+    <p>여기는 본문 입니다</p>
+    <p>여기는 본문 입니다</p>
+    <p>여기는 본문 입니다</p>
+  </div>
+
+  <button class="accodion">버튼 3</button>
+
+  <div class="panel">
+    <p>여기는 본문 입니다</p>
+    <p>여기는 본문 입니다</p>
+    <p>여기는 본문 입니다</p>
+    <p>여기는 본문 입니다</p>
+  </div>
+
+  <button class="accodion">버튼 3</button>
+
+  <div class="panel">
+    <p>여기는 본문 입니다</p>
+    <p>여기는 본문 입니다</p>
+    <p>여기는 본문 입니다</p>
+    <p>여기는 본문 입니다</p>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accodion");
+    var i;
+
+    for(i = 0; i < acc.length; i++){
+      acc[i].onclick = function(){        //버튼을 누르면 실행
+        this.classList.toggle("active")   // 한번은 온, 한번은 오프
+
+        var panel = this.nextElementSibling; //선택된 패널의 다음 패널
+
+        if(panel.style.maxHeight){
+          panel.style.maxHeight = null;  //패널이 열려있으면 null값을 적용해서
+        }                               //월래 값인 0값을 갖음 => 닫힘
+        else{
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          //패널이 닫혀있으면 maxHeight에 높이 값을 적용
+          //scrollHeight(본문의 높이값)만큼 => 열림
+        }
+      }
+    }
+  </script>
+</body>
+</html>
