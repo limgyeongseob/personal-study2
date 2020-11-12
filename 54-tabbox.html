@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tab-box</title>
+  <style>
+    div.tab{
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+    div.tab button{
+      background-color: inherit;  /*배경색 상속*/
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    div.tab button:hover{
+      background-color: #ddd;
+    }
+    /* 마우스 클릭했을 때 색상 */
+    div.tab button.active{
+      background-color: #ccc;
+    }
+    .tabcontent{
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="tab">
+    <button id="defaultOpen" class="tablinks" onclick="openCity(event, 'London')">런던</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">파리</button>
+    <button class="tablinks" onclick="openCity(event, 'Seoul')">서울</button>
+  </div>
+
+  <div id="London" class="tabcontent">
+    <h3>런던</h3>
+    <p>여기는 런던 런던 런던 런던</p>
+  </div>
+  <div id="Paris" class="tabcontent">
+    <h3>파리</h3>
+    <p>여기는 파리 파리 파리 파리</p>
+  </div>
+  <div id="Seoul" class="tabcontent">
+    <h3>서울</h3>
+    <p>여기는 서울 서울 서울 서울</p>
+  </div>
+
+  <script>
+    function openCity(evt, cityName){
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for(i = 0; i < tabcontent.length; i++){
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for(i = 0; i < tablinks.length; i++){
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";  //눌러진 버튼
+    }
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+</html>
