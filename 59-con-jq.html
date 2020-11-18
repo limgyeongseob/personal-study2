@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>connet jquery</title>
+  <style>
+    #p1{
+      width: 200px;
+      height: 30px;
+      background-color: powderblue;
+    }
+    #p2{
+      width: 200px;
+      height: 130px;
+      background-color: rebeccapurple;
+    }
+  </style>
+</head>
+<body>
+  <div id="p1">다음</div>
+  <div id="p2">네이버</div>
+
+  <!-- 제이쿼리 연결 1 -->
+  <!-- <script type="text/javascript" src="jquery-3.5.1.js"></script> -->
+
+  <!-- 제이쿼리 연결 2 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(function(){
+      $("#p1").html("카카오뮤직");
+    });
+
+    $("#p2").mouseover(function(){
+      $(this).html("네이트닷컴");
+    });
+
+    $("#p2").mouseout(function(){
+      $(this).html("네이버");
+    });
+  </script>
+</body>
+</html>
