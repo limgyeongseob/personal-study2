@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>connect jquery</title>
+  <style>
+    #p1{
+      width: 200px;
+      height: 30px;
+      background-color: aquamarine;
+    }
+    #p2{
+      width: 200px;
+      height: 130px;
+      background-color: bisque;
+    }
+  </style>
+</head>
+<body>
+  <div id="p1">다음</div>
+  <div id="p2">네이버</div>
+
+  <button id="b1">버튼1</button>
+  <button id="b2">버튼2</button>
+
+  <!-- 제이쿼리 연결 1 -->
+  <!-- <script type="text/javascript" src="jquery-3.5.1.js"></script> -->
+
+  <!-- 제이쿼리 연결 2 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $("button#b1").click(function(){
+      $("#p1").html("카카오");
+    });
+    $("button#b2").click(function(){
+      $("#p1").html("다음");
+    });
+  </script>
+</body>
+</html>
