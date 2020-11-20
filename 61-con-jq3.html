@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>connect jquery3</title>
+</head>
+<body>
+  <a href="http://www.daum.net">다음</a>
+  <p>다음 다음</p>
+  <button id="btn01">네이버로 바꿈</button>
+  <button id="btn02">다음으로 바꿈</button>
+
+  <!-- 제이쿼리 연결 1 -->
+  <!-- <script type="text/javascript" src="jquery-3.5.1.js"></script> -->
+
+    <!-- 제이쿼리 연결 2 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $("#btn01").click(function(){
+      $("a").attr("href", "http://www.naver.com");
+      $("a").text("네이버(naver)");
+      $("p").css("color", "red");
+      $("p").html("네이버 네이버");
+    });
+    
+    $("#btn02").click(function(){
+      $("a").attr("href", "http://www.daum.net");
+      $("a").text("다음(daum)");
+      $("p").css("color", "blue");
+      $("p").html("다음 다음");
+    });
+  </script>
+</body>
+</html>
