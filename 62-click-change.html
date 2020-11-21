@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>click change</title>
+</head>
+<body>
+  <img src="i-f.jpg" alt="">
+  <br>
+  <button id="b1">버튼1</button>
+  <button id="b2">버튼2</button>
+
+  <!-- 제이쿼리 연결 1 -->
+  <!-- <script type="text/javascript" src="jquery-3.5.1.js"></script> -->
+
+  <!-- 제이쿼리 연결 2 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $("button#b1").click(function(){
+      $("img").attr("src", "i-b.jpg");
+    });
+    $("button#b2").click(function(){
+      $("img").attr("src", "i-f.jpg");
+    });
+
+    $("img").mouseover(function(){
+      $(this).attr("src", "i-b.jpg");
+    });
+    $("img").mouseout(function(){
+      $(this).attr("src", "i-f.jpg");
+    });
+  </script>
+</body>
+</html>
