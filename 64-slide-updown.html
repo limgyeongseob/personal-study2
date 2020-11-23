@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slide up down</title>
+  <style>
+    dl{
+      width: 300px;
+      margin: 50px auto;
+    }
+    dl dt.topbtn{
+      background-color: aliceblue;
+      cursor: pointer;
+      height: 50px;
+      text-align: center;
+    }
+    dl dd{
+      border: 3px solid black;
+      height: 200px;
+      margin: 0;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <dl>
+    <dt class="topbtn">메뉴1</dt>
+    <dd>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ex!
+    </dd>
+  </dl>
+
+  <!-- 제이쿼리 연결 1 -->
+  <!-- <script type="text/javascript" src="jquery-3.5.1.js"></script> -->
+
+  <!-- 제이쿼리 연결 2 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(".topbtn").click(function(){
+      $("dd").slideToggle("show");
+    });
+  </script>
+</body>
+</html>
