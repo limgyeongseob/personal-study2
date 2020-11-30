@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle</title>
+  <style>
+    #panel, #flip{
+      padding: 5px;
+      text-align: center;
+      background-color: rebeccapurple;
+      color: white;
+      border: 1px solid black;
+    }
+    #panel{
+      padding: 50px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="flip">메뉴 1여기를 누르시오</div>
+  <div id="panel">여기는 메뉴1의 본문 입니다.</div>
+
+  <!-- 제이쿼리 연결 1 -->
+  <!-- <script type="text/javascript" src="jquery-3.5.1.js"></script> -->
+
+  <!-- 제이쿼리 연결 2 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+
+      $("#flip").mouseover(function(){
+          $("#panel").slideDown("slow");
+      });
+      $("#panel").mouseleave(function(){
+          $("#panel").slideUp("slow");
+      });
+
+      /*$("#flip").click(function(){
+          $("#panel").slideToggle("slow");
+      });*/
+    </script>
+</body>
+</html>
