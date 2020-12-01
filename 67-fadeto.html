@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fade to</title>
+</head>
+<body>
+
+  <button id="view">표시(100%)</button>
+  <button id="view50">반투명(50%)</button>
+  <button id="view0">비표시(0%)</button>
+
+  <p>
+    <img src="flower.jpg" alt="">
+  </p>
+ 
+  <!-- 제이쿼리 연결 1 -->
+  <!-- <script type="text/javascript" src="jquery-3.5.1.js"></script> -->
+  <!-- 제이쿼리 연결 2 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+
+    $("button#view").click(function(){
+      $("img").fadeTo("slow", 1);
+    });
+    $("button#view50").click(function(){
+      $("img").fadeTo("slow", 0.5);
+    });
+    $("button#view0").click(function(){
+      $("img").fadeTo("slow", 0);
+    });   
+  </script>
+</body>
+</html>
